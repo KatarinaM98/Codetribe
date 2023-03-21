@@ -72,19 +72,21 @@ public class Project {
         this.projectStatus = projectStatus;
     }
 
-    //tasks
 
-//    public void statusProject() {
-//        if (projectStatus.equals("PLANNING")) {
-//            System.out.println("TO DO");
-//        } else if (projectStatus.equals("FINISHED")) {
-//            System.out.println("Done");
-//        } else if (!projectStatus.equals("PLANNING") && !projectStatus.equals("FINISHED")) {
-//            projectStatus.equals("DEVELOPMENT");
-//        } else {
-//            System.out.println("INVALLID");
-//        }
-//    }
+    //ToString
+
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "name='" + name + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", deadline=" + deadline +
+                ", clientName='" + clientName + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", projectStatus=" + projectStatus +
+                '}';
+    }
 }
 
 

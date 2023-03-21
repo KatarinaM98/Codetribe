@@ -1,10 +1,10 @@
 package Project;
 
-public class Tasks {
-    protected String name;
+public class Tasks extends Project {
+    protected String taskName;
     protected String taskSpecification;
     protected TaskStatus statusOfTheTask;
-    protected int deadline;
+    protected int taskDeadline;
 
 
 
@@ -12,19 +12,21 @@ public class Tasks {
 
     }
 
-    public Tasks(String name, String taskSpecification, TaskStatus statusOfTheTask, int deadline) {
-        this.name = name;
+    public Tasks(String name, String startDate, int deadline, String clientName, String shortDescription, ProjectStatus projectStatus,
+            String taskName, String taskSpecification, TaskStatus statusOfTheTask, int taskDeadline) {
+        super(name, startDate, deadline, clientName, shortDescription, projectStatus);
+        this.taskName = taskName;
         this.taskSpecification = taskSpecification;
         this.statusOfTheTask = statusOfTheTask;
-        this.deadline = deadline;
+        this.taskDeadline = taskDeadline;
     }
 
-    public String getName() {
-        return name;
+    public String getTaskName() {
+        return taskName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 
     public String getTaskSpecification() {
@@ -43,16 +45,31 @@ public class Tasks {
         this.statusOfTheTask = statusOfTheTask;
     }
 
-    public int getDeadline() {
-        return deadline;
+    public int getTaskDeadline() {
+        return taskDeadline;
     }
 
-    public void setDeadline(int deadline) {
-        this.deadline = deadline;
+    public void setTaskDeadline(int taskDeadline) {
+        this.taskDeadline = taskDeadline;
     }
 
 
+    //toString
 
 
-
+    @Override
+    public String toString() {
+        return "Tasks{" +
+                "taskName='" + taskName + '\'' +
+                ", taskSpecification='" + taskSpecification + '\'' +
+                ", statusOfTheTask=" + statusOfTheTask +
+                ", taskDeadline=" + taskDeadline +
+                ", name='" + name + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", deadline=" + deadline +
+                ", clientName='" + clientName + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", projectStatus=" + projectStatus +
+                '}';
+    }
 }
