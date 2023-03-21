@@ -8,20 +8,20 @@ public class Project {
 
     protected String shortDescription;
 
-    protected Status status;
+    protected ProjectStatus projectStatus;
 
 
     public Project() {
 
     }
 
-    public Project(String name, String startDate, int deadline, String clientName, String shortDescription, Status status) {
+    public Project(String name, String startDate, int deadline, String clientName, String shortDescription, ProjectStatus projectStatus) {
         this.name = name;
         this.startDate = startDate;
         this.deadline = deadline;
         this.clientName = clientName;
         this.shortDescription = shortDescription;
-        this.status = status;
+        this.projectStatus = projectStatus;
     }
 
     public String getName() {
@@ -64,12 +64,31 @@ public class Project {
         this.shortDescription = shortDescription;
     }
 
-    public Project.Status getStatus() {
-        return status;
+    public ProjectStatus getStatus() {
+        return projectStatus;
     }
 
-    public void setStatus(Project.Status status) {
-        this.status = status;
+    public void setStatus(ProjectStatus projectStatus) {
+        this.projectStatus = projectStatus;
     }
+
+    //tasks
+
+//    public void statusProject() {
+//        if (projectStatus.equals("PLANNING")) {
+//            System.out.println("TO DO");
+//        } else if (projectStatus.equals("FINISHED")) {
+//            System.out.println("Done");
+//        } else if (!projectStatus.equals("PLANNING") && !projectStatus.equals("FINISHED")) {
+//            projectStatus.equals("DEVELOPMENT");
+//        } else {
+//            System.out.println("INVALLID");
+//        }
+//    }
 }
+
+
+
+
+
 
