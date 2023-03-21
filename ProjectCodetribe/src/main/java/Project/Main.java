@@ -50,6 +50,7 @@ public class Main {
         System.out.println("Enter task deadline ");
         int taskDeadline = s.nextInt();
         task1.setTaskDeadline(taskDeadline);
+        s.nextLine();
 
         System.out.println(task1.toString());
         //task1.toString();
@@ -73,13 +74,13 @@ public class Main {
             task1.setStatus(ProjectStatus.valueOf(statusB2));
         }
 
-//        if (project1.projectStatus.equals(ProjectStatus.PLANNING)) {
-//            task1.statusOfTheTask.equals(TaskStatus.TO_DO);
-//        } else if (project1.projectStatus.equals(ProjectStatus.DEVELOPMENT)) {
-//            task1.statusOfTheTask.equals(TaskStatus.IN_PROGRESS);
-//        } else if (project1.projectStatus.equals(ProjectStatus.FINISHED)) {
-//            task1.statusOfTheTask.equals(TaskStatus.DONE);
-//        }
+        if (task1.projectStatus.equals(ProjectStatus.PLANNING)) {
+            task1.statusOfTheTask.equals(TaskStatus.TO_DO);
+        } else if (task1.projectStatus.equals(ProjectStatus.DEVELOPMENT)) {
+           task1.statusOfTheTask.equals(TaskStatus.IN_PROGRESS);
+       } else if (task1.projectStatus.equals(ProjectStatus.FINISHED)) {
+           task1.statusOfTheTask.equals(TaskStatus.DONE);
+       }
 
 
 
